@@ -24,42 +24,86 @@ namespace EcuacionesLneales
 
         private void Resolver_Click(object sender, EventArgs e)
         {
-            if (textFun1.Text == "" && textFun2.Text == "")
-            {
-                MessageBox.Show("Para poder realizar la operación, ingrese " +
-                    "las ecuaciones en los espacios designados.");
+            string función1 = textFun1.Text;
+            string función2 = textFun2.Text;
+            string funciónMin1 = función1.ToLower();
+            string funciónMin2 = función2.ToLower();
+            string funciónSinEspacios1 = funciónMin1.Replace(" ", "");
+            string funciónSinEspacios2 = funciónMin2.Replace(" ", "");
 
+            if (OPCIONES.SelectedItem.ToString() == "y=mx+b")
+            {
+
+
+                if (textFun1.Text == "" && textFun2.Text == "")
+                {
+                    MessageBox.Show("Para poder realizar la operación, ingrese " +
+                        "las ecuaciones en los espacios designados.");
+
+                }
+                else
+                {
+                    int indexM = (funciónSinEspacios1.IndexOf("=") + 1);
+                    int indexX = (funciónSinEspacios1.IndexOf("x") - 2);
+                    int indexM2 = (funciónSinEspacios2.IndexOf("=") + 1);
+                    int indexX2 = (funciónSinEspacios2.IndexOf("x") - 2);
+                    string m1 = (funciónSinEspacios1.Substring(indexM, indexX));
+                    string m2 = (funciónSinEspacios2.Substring(indexM2, indexX2));
+                    float pend1 = 0;
+                    float pend2 = 0;
+                    bool result1 = (float.TryParse(m1, out pend1));
+                    bool result2 = (float.TryParse(m2, out pend2));
+                    if (result1 == false && result2 == false)
+                    {
+                        MessageBox.Show("Por favor ingrese un numero que corresponda al valor de la pendiente m");
+                    }
+                    if (result1 && result2)
+                    {
+                        if (pend1 * pend2 == -1)
+                        {
+                            textfin3.Text = ("PERPENDICULAR");
+                        }
+                        if (pend2 == pend1)
+                        {
+                            textfin3.Text = ("PARALELA");
+                        }
+                    }
+                }
             }
             else
             {
-                string función1 = textFun1.Text;
-                string función2 = textFun2.Text;
-                string funciónSinEspacios1 = función1.Replace(" ", "");
-                string funciónSinEspacios2 = función2.Replace(" ", "");
-                int indexM = (funciónSinEspacios1.IndexOf("=") + 1);
-                int indexX = (funciónSinEspacios1.IndexOf("x") - 1);
-                int indexM2 = (funciónSinEspacios2.IndexOf("=") + 1);
-                int indexX2 = (funciónSinEspacios2.IndexOf("x") - 1);
-                string m1 = (funciónSinEspacios1.Substring(indexM,indexX));
-                string m2 = (funciónSinEspacios2.Substring(indexM2,indexX2));
-                float pend1 = 0;
-                float pend2 = 0;
-                bool result1=(float.TryParse(m1, out pend1));
-                bool result2 = (float.TryParse(m2, out pend2));
-                if(result1==false && result2==false)
+                if (textFun1.Text == "" && textFun2.Text == "")
                 {
-                    MessageBox.Show("Por favor ingrese un numero que corresponda al valor de la pendiente m" +
-                        " si el valor de la pendiente es cero o uno por favor ingrese ese valor en la función");
+                    MessageBox.Show("Para poder realizar la operación, ingrese " +
+                        "las ecuaciones en los espacios designados.");
+
                 }
-                if(result1 && result2)
+                else
                 {
-                    if (pend1 * pend2 == -1)
+                    int indexM = (funciónSinEspacios1.IndexOf("=") + 1);
+                    int indexX = (funciónSinEspacios1.IndexOf("(") - 2);
+                    int indexM2 = (funciónSinEspacios2.IndexOf("=") + 1);
+                    int indexX2 = (funciónSinEspacios2.IndexOf("(") - 2);
+                    string m1 = (funciónSinEspacios1.Substring(indexM, indexX));
+                    string m2 = (funciónSinEspacios2.Substring(indexM2, indexX2));
+                    float pend1 = 0;
+                    float pend2 = 0;
+                    bool result1 = (float.TryParse(m1, out pend1));
+                    bool result2 = (float.TryParse(m2, out pend2));
+                    if (result1 == false && result2 == false)
                     {
-                        textfin3.Text = ("PERPENDICULAR");
+                        MessageBox.Show("Por favor ingrese un numero que corresponda al valor de la pendiente m");
                     }
-                    if (pend2 == pend1)
+                    if (result1 && result2)
                     {
-                        textfin3.Text = ("PARALELA");
+                        if (pend1 * pend2 == -1)
+                        {
+                            textfin3.Text = ("PERPENDICULAR");
+                        }
+                        if (pend2 == pend1)
+                        {
+                            textfin3.Text = ("PARALELA");
+                        }
                     }
                 }
             }

@@ -1,0 +1,10 @@
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\bin\Debug\EcuacionesLneales.exe.config
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\bin\Debug\EcuacionesLneales.exe
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\bin\Debug\EcuacionesLneales.pdb
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\obj\Debug\EcuacionesLneales.csproj.AssemblyReference.cache
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\obj\Debug\EcuacionesLneales.Form1.resources
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\obj\Debug\EcuacionesLneales.Properties.Resources.resources
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\obj\Debug\EcuacionesLneales.csproj.GenerateResource.cache
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\obj\Debug\EcuacionesLneales.csproj.CoreCompileInputs.cache
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\obj\Debug\EcuacionesLneales.exe
+C:\Users\juanh\source\repos\EcuacionesLneales\EcuacionesLneales\obj\Debug\EcuacionesLneales.pdb

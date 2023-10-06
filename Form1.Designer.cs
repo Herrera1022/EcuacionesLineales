@@ -115,6 +115,7 @@
             // 
             // textfin3
             // 
+            this.textfin3.Enabled = false;
             this.textfin3.Location = new System.Drawing.Point(426, 290);
             this.textfin3.Name = "textfin3";
             this.textfin3.Size = new System.Drawing.Size(269, 26);
@@ -144,6 +145,7 @@
             // 
             // textfin2
             // 
+            this.textfin2.Enabled = false;
             this.textfin2.Location = new System.Drawing.Point(744, 290);
             this.textfin2.Name = "textfin2";
             this.textfin2.Size = new System.Drawing.Size(269, 26);

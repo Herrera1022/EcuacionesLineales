@@ -24,22 +24,29 @@ namespace EcuacionesLneales
 
         private void Resolver_Click(object sender, EventArgs e)
         {
+            /*Definición de variables globales que se utilizaran en todo el programa
+             */
             string función1 = textFun1.Text;
             string función2 = textFun2.Text;
             string funciónMin1 = función1.ToLower();
             string funciónMin2 = función2.ToLower();
             string funciónSinEspacios1 = funciónMin1.Replace(" ", "");
             string funciónSinEspacios2 = funciónMin2.Replace(" ", "");
+            /*restricción en la que el usuario no ingrese ninguna opción que se le hay otorgado
+             */
             if (OPCIONES.SelectedItem == null)
             {
                 MessageBox.Show("Por favor seleccione una de las opciones para resolver el sistema de ecuaciones ");
             }
             else
             {
-
+                /*verificación de una de las opciones proporcionadas al usuario
+                 */
                 if (OPCIONES.SelectedItem.ToString() == "y=mx+b")
                 {
-
+                    /*proceso en el cual se calcula la pendiente y se dice si se cortan en algún punto o son paralelas 
+                     * perpendiculares
+                     */
 
                     if (textFun1.Text == "" && textFun2.Text == "")
                     {
@@ -97,8 +104,13 @@ namespace EcuacionesLneales
                         }
                     }
                 }
+                /*verificación de una de las opciones proporcionadas al usuario
+                 */
                 if(OPCIONES.SelectedItem.ToString() == "y-y1=m(x-x1)")
                 {
+                    /*proceso en el cual se calcula la pendiente y se dice si se cortan en algún punto o son paralelas 
+                     * perpendiculares
+                     */
                     if (textFun1.Text == "" && textFun2.Text == "")
                     {
                         MessageBox.Show("Para poder realizar la operación, ingrese " +

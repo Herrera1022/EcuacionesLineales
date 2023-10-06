@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,11 +35,11 @@
             this.textFun2 = new System.Windows.Forms.TextBox();
             this.Resolver = new System.Windows.Forms.Button();
             this.Nuevo = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label6 = new System.Windows.Forms.Label();
             this.textfin3 = new System.Windows.Forms.TextBox();
             this.OPCIONES = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textfin2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -106,27 +103,11 @@
             this.Nuevo.Text = "Nuevo";
             this.Nuevo.UseVisualStyleBackColor = true;
             // 
-            // chart1
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(475, 92);
-            this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(492, 263);
-            this.chart1.TabIndex = 11;
-            this.chart1.Text = "chart1";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(582, 396);
+            this.label6.Location = new System.Drawing.Point(422, 226);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(273, 23);
             this.label6.TabIndex = 12;
@@ -134,7 +115,7 @@
             // 
             // textfin3
             // 
-            this.textfin3.Location = new System.Drawing.Point(586, 438);
+            this.textfin3.Location = new System.Drawing.Point(426, 290);
             this.textfin3.Name = "textfin3";
             this.textfin3.Size = new System.Drawing.Size(269, 26);
             this.textfin3.TabIndex = 13;
@@ -151,15 +132,33 @@
             this.OPCIONES.TabIndex = 14;
             this.OPCIONES.Text = "Elija la opción de la forma de la ecuación";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(740, 226);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(228, 23);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "punto de intersección";
+            // 
+            // textfin2
+            // 
+            this.textfin2.Location = new System.Drawing.Point(744, 290);
+            this.textfin2.Name = "textfin2";
+            this.textfin2.Size = new System.Drawing.Size(269, 26);
+            this.textfin2.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1137, 587);
+            this.Controls.Add(this.textfin2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.OPCIONES);
             this.Controls.Add(this.textfin3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.chart1);
             this.Controls.Add(this.Nuevo);
             this.Controls.Add(this.Resolver);
             this.Controls.Add(this.textFun2);
@@ -170,7 +169,6 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,10 +183,11 @@
         private System.Windows.Forms.TextBox textFun2;
         private System.Windows.Forms.Button Resolver;
         private System.Windows.Forms.Button Nuevo;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textfin3;
         private System.Windows.Forms.ComboBox OPCIONES;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textfin2;
     }
 }
 
